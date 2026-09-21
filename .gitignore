@@ -1,0 +1,12 @@
+# Compiled executables
+*.exe
+
+# Temporary analyzer files
+backend_temp_code.cpp
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

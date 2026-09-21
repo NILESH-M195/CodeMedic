@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeMedic — C++ Code Health Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                +
+            </div>
+
+            <div>
+                <div class="brand-name">CodeMedic</div>
+                <div class="brand-subtitle">C++ Code Health Analyzer</div>
+            </div>
+
+        </div>
+
+
+        <div class="system-status">
+
+            <span class="status-indicator"></span>
+
+            <span>Analyzer Ready</span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main -->
+    <main class="container">
+
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="eyebrow">
+                C++ STATIC ANALYSIS PLATFORM
+            </div>
+
+            <h1>
+                Code health,
+                <span>diagnosed.</span>
+            </h1>
+
+            <p>
+                Analyze your C++ source code for complexity, structure,
+                object-oriented design and potential quality issues.
+            </p>
+
+        </section>
+
+
+
+        <!-- Upload -->
+        <section class="upload-card">
+
+            <div class="upload-content">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h2>
+                    Analyze a C++ source file
+                </h2>
+
+                <p>
+                    Drag and drop your <strong>.cpp</strong> file here,
+                    or browse from your computer.
+                </p>
+
+                <label for="fileInput" class="browse-button">
+                    Choose C++ File
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".cpp"
+                    hidden
+                >
+
+                <div id="selectedFile" class="selected-file">
+                    No file selected
+                </div>
+
+            </div>
+
+
+            <div class="upload-footer">
+
+                <span>
+                    Supported format: C++
+                </span>
+
+                <button id="analyzeButton" class="analyze-button">
+                    Analyze Code
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Dashboard header -->
+        <div class="section-heading">
+
+            <div>
+                <div class="section-label">
+                    ANALYSIS
+                </div>
+
+                <h2>
+                    Code overview
+                </h2>
+            </div>
+
+            <div class="file-badge">
+                complex_code.cpp
+            </div>
+
+        </div>
+
+
+
+        <!-- Primary metrics -->
+        <section class="metrics-grid">
+
+
+            <div class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-label">
+                        HEALTH SCORE
+                    </span>
+
+                    <span class="metric-icon health-icon">
+                        +
+                    </span>
+                </div>
+
+                <div class="metric-value">
+                    70<span>/100</span>
+                </div>
+
+                <div class="metric-description">
+                    Needs attention
+                </div>
+
+            </div>
+
+
+
+            <div class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-label">
+                        COMPLEXITY
+                    </span>
+
+                    <span class="metric-icon">
+                        ◇
+                    </span>
+                </div>
+
+                <div class="metric-value">
+                    O(n²)
+                </div>
+
+                <div class="metric-description">
+                    Estimated complexity
+                </div>
+
+            </div>
+
+
+
+            <div class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-label">
+                        WARNINGS
+                    </span>
+
+                    <span class="metric-icon warning-icon">
+                        !
+                    </span>
+                </div>
+
+                <div class="metric-value">
+                    2
+                </div>
+
+                <div class="metric-description">
+                    Issues detected
+                </div>
+
+            </div>
+
+
+
+            <div class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-label">
+                        SOURCE LINES
+                    </span>
+
+                    <span class="metric-icon">
+                        #
+                    </span>
+                </div>
+
+                <div class="metric-value">
+                    35
+                </div>
+
+                <div class="metric-description">
+                    Total lines analyzed
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Main analysis grid -->
+        <section class="analysis-grid">
+
+
+            <!-- Health -->
+            <div class="panel health-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <div class="panel-label">
+                            CODE HEALTH
+                        </div>
+
+                        <h3>
+                            Overall quality
+                        </h3>
+                    </div>
+
+                    <span class="panel-status">
+                        NEEDS ATTENTION
+                    </span>
+
+                </div>
+
+
+                <div class="health-content">
+
+                    <div class="health-ring">
+
+                        <div class="health-ring-inner">
+
+                            <strong>
+                                70
+                            </strong>
+
+                            <span>
+                                / 100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="health-details">
+
+                        <p>
+                            Your code is functional but has areas
+                            that could be improved for maintainability
+                            and complexity.
+                        </p>
+
+
+                        <div class="health-stat">
+
+                            <span>
+                                Warnings
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                        </div>
+
+
+                        <div class="health-stat">
+
+                            <span>
+                                Nested loops
+                            </span>
+
+                            <strong>
+                                1
+                            </strong>
+
+                        </div>
+
+
+                        <div class="health-stat">
+
+                            <span>
+                                Conditions
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Complexity -->
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <div class="panel-label">
+                            COMPLEXITY
+                        </div>
+
+                        <h3>
+                            Computational analysis
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div class="complexity-main">
+
+                    <span class="complexity-symbol">
+                        O(n²)
+                    </span>
+
+                    <div>
+
+                        <strong class="complexity-label">
+    complexity analysis
+</strong>
+
+                        <p>
+                            Nested iteration detected in the source code.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="complexity-bar">
+
+                    <div class="complexity-fill"></div>
+
+                </div>
+
+
+                <div class="complexity-footer">
+
+                    <span>
+                        Nested loops
+                    </span>
+
+                    <strong>
+                        1 detected
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Secondary analysis -->
+        <section class="secondary-grid">
+
+
+            <!-- Code statistics -->
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <div class="panel-label">
+                            CODE STRUCTURE
+                        </div>
+
+                        <h3>
+                            Source statistics
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div class="stats-list">
+
+                    <div class="stat-row">
+                        <span>Total lines</span>
+                        <strong>35</strong>
+                    </div>
+
+                    <div class="stat-row">
+                        <span>Code lines</span>
+                        <strong>28</strong>
+                    </div>
+
+                    <div class="stat-row">
+                        <span>Comment lines</span>
+                        <strong>0</strong>
+                    </div>
+
+                    <div class="stat-row">
+                        <span>Functions</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <div class="stat-row">
+                        <span>Loops</span>
+                        <strong>3</strong>
+                    </div>
+
+                    <div class="stat-row">
+                        <span>Conditions</span>
+                        <strong>2</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OOP -->
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <div class="panel-label">
+                            OBJECT-ORIENTED DESIGN
+                        </div>
+
+                        <h3>
+                            OOP analysis
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div class="oop-list">
+
+                    <div class="oop-row">
+
+                        <div>
+                            <strong>Classes</strong>
+                            <span>Detected classes</span>
+                        </div>
+
+                        <b class="oop-number">
+                            1
+                        </b>
+
+                    </div>
+
+
+                    <div class="oop-row">
+
+                        <div>
+                            <strong>Encapsulation</strong>
+                            <span>Access control detected</span>
+                        </div>
+
+                        <b class="badge success">
+                            DETECTED
+                        </b>
+
+                    </div>
+
+
+                    <div class="oop-row">
+
+                        <div>
+                            <strong>Inheritance</strong>
+                            <span>Inheritance relationship</span>
+                        </div>
+
+                        <b class="badge neutral">
+                            NOT DETECTED
+                        </b>
+
+                    </div>
+
+
+                    <div class="oop-row">
+
+                        <div>
+                            <strong>Polymorphism</strong>
+                            <span>Virtual behavior</span>
+                        </div>
+
+                        <b class="badge neutral">
+                            NOT DETECTED
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Warnings -->
+       <!-- BEFORE VS AFTER COMPARISON -->
+<section class="panel comparison-panel" id="comparisonPanel">
+
+    <div class="panel-header">
+
+        <div>
+            <div class="panel-label">
+                CODE IMPROVEMENT
+            </div>
+
+            <h3>
+                Before vs After
+            </h3>
+        </div>
+
+        <span class="comparison-status" id="comparisonStatus">
+            Ready
+        </span>
+
+    </div>
+
+    <div class="comparison-grid">
+
+        <div class="comparison-card">
+            <span>Health Score</span>
+
+            <strong id="beforeHealth">
+                —
+            </strong>
+
+            <small>Before</small>
+
+            <strong id="afterHealth">
+                —
+            </strong>
+
+            <small>After</small>
+
+            <div class="comparison-change" id="healthChange">
+                —
+            </div>
+        </div>
+
+
+        <div class="comparison-card">
+            <span>Warnings</span>
+
+            <strong id="beforeWarnings">
+                —
+            </strong>
+
+            <small>Before</small>
+
+            <strong id="afterWarnings">
+                —
+            </strong>
+
+            <small>After</small>
+
+            <div class="comparison-change" id="warningChange">
+                —
+            </div>
+        </div>
+
+
+        <div class="comparison-card">
+            <span>Complexity</span>
+
+            <strong id="beforeComplexity">
+                —
+            </strong>
+
+            <small>Before</small>
+
+            <strong id="afterComplexity">
+                —
+            </strong>
+
+            <small>After</small>
+
+            <div class="comparison-change" id="complexityChange">
+                —
+            </div>
+        </div>
+
+    </div>
+
+</section>
+        <section class="panel warnings-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <div class="panel-label">
+                        DIAGNOSTICS
+                    </div>
+
+                    <h3>
+                        Detected issues
+                    </h3>
+
+                </div>
+
+                <span class="warning-count">
+                    2 warnings
+                </span>
+
+            </div>
+
+
+            <div class="warning-item">
+
+                <div class="warning-number">
+                    01
+                </div>
+
+                <div>
+
+                    <strong>
+                        Nested loop detected
+                    </strong>
+
+                    <p>
+                        Nested loops may increase execution time
+                        as input size grows.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="warning-item">
+
+                <div class="warning-number">
+                    02
+                </div>
+
+                <div>
+
+                    <strong>
+                        No comments detected
+                    </strong>
+
+                    <p>
+                        Consider adding meaningful comments to
+                        improve code maintainability.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div>
+            CodeMedic
+        </div>
+
+        <span>
+            C++ Code Health & Complexity Analyzer
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
